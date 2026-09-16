@@ -62,6 +62,12 @@
       text-decoration: none;
     }
 
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     .container {
       width: min(1160px, calc(100% - 40px));
       margin: 0 auto;
@@ -176,24 +182,40 @@
     */
 
     .hero {
-      background:
-        linear-gradient(
-          135deg,
-          #ffffff 0%,
-          #ffffff 55%,
-          #edf5fa 100%
-        );
+      background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #ffffff 55%,
+        #edf5fa 100%
+      );
     }
 
-    .hero-inner {
+    .hero-grid {
       min-height: 610px;
-      display: flex;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      gap: 0;
     }
 
     .hero-copy {
-      max-width: 900px;
-      padding: 65px 0 70px;
+      padding: 60px 50px 60px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-image {
+      min-height: 610px;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 610px;
+      object-fit: cover;
+      object-position: center;
     }
 
     .hero-business-name {
@@ -211,7 +233,7 @@
       font-weight: 800;
       letter-spacing: 1.8px;
       text-transform: uppercase;
-      margin-bottom: 26px;
+      margin-bottom: 25px;
     }
 
     .eyebrow {
@@ -225,24 +247,23 @@
 
     h1 {
       color: var(--navy-dark);
-      font-size: clamp(42px, 6vw, 68px);
-      line-height: 1.03;
+      font-size: clamp(39px, 5vw, 62px);
+      line-height: 1.04;
       letter-spacing: -2px;
-      max-width: 900px;
     }
 
     .hero-copy > p {
       font-size: 20px;
       color: var(--muted);
-      max-width: 760px;
       margin-top: 22px;
+      max-width: 650px;
     }
 
     .trust-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
-      margin: 30px 0;
+      gap: 16px;
+      margin: 28px 0;
     }
 
     .trust-item {
@@ -262,6 +283,7 @@
       display: grid;
       place-items: center;
       font-weight: 900;
+      flex: 0 0 34px;
     }
 
     .hero-buttons {
@@ -275,7 +297,7 @@
     */
 
     section {
-      padding: 72px 0;
+      padding: 70px 0;
     }
 
     .section-heading {
@@ -379,7 +401,17 @@
       background: white;
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 34px;
+      overflow: hidden;
+    }
+
+    .audience-photo {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .audience-content {
+      padding: 30px;
     }
 
     .audience-card h3 {
@@ -390,25 +422,21 @@
 
     .audience-card p {
       color: var(--muted);
-      margin-bottom: 20px;
+      font-size: 17px;
     }
 
-    .check-list {
+    .audience-points {
       list-style: none;
+      margin-top: 18px;
       display: grid;
-      gap: 11px;
+      gap: 9px;
     }
 
-    .check-list li {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
-    .check-list li::before {
+    .audience-points li::before {
       content: "✓";
       color: var(--navy);
       font-weight: 900;
+      margin-right: 9px;
     }
 
     /*
@@ -425,7 +453,11 @@
       border: 1px solid var(--border);
       border-radius: 14px;
       background: white;
-      padding: 30px;
+      overflow: hidden;
+    }
+
+    .service-card-content {
+      padding: 28px;
     }
 
     .service-card h3 {
@@ -436,6 +468,12 @@
 
     .service-card p {
       color: var(--muted);
+    }
+
+    .service-photo {
+      width: 100%;
+      height: 255px;
+      object-fit: cover;
     }
 
     .service-list {
@@ -454,42 +492,18 @@
       margin-right: 8px;
     }
 
-    /*
-      ONE STOP SHOP
-    */
-
-    .one-stop {
-      background: var(--navy);
-      color: white;
-    }
-
-    .one-stop .section-heading h2,
-    .one-stop .section-heading p {
-      color: white;
-    }
-
-    .one-stop-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .one-stop-item {
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.18);
+    .one-company-note {
+      margin-top: 28px;
+      padding: 24px 28px;
       border-radius: 12px;
-      padding: 23px;
+      background: var(--light-blue);
+      color: var(--navy-dark);
+      text-align: center;
+      font-size: 17px;
     }
 
-    .one-stop-item strong {
-      display: block;
-      font-size: 18px;
-      margin-bottom: 7px;
-    }
-
-    .one-stop-item span {
-      color: #dce9f2;
-      font-size: 14px;
+    .one-company-note strong {
+      font-weight: 900;
     }
 
     /*
@@ -554,7 +568,7 @@
     }
 
     /*
-      CTA
+      FINAL CTA
     */
 
     .cta {
@@ -628,7 +642,7 @@
     }
 
     /*
-      MOBILE NAV
+      MOBILE NAVIGATION
     */
 
     .mobile-menu-button {
@@ -647,6 +661,10 @@
     .mobile-action-bar {
       display: none;
     }
+
+    /*
+      TABLET
+    */
 
     @media (max-width: 900px) {
 
@@ -675,22 +693,38 @@
         min-height: 68px;
       }
 
-      .hero-inner {
-        min-height: auto;
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        order: -1;
+        min-height: 390px;
+      }
+
+      .hero-image img {
+        min-height: 390px;
+        max-height: 500px;
       }
 
       .hero-copy {
-        padding: 48px 0 55px;
+        padding: 42px 0 52px;
       }
 
       h1 {
         font-size: 46px;
       }
 
-      .reviews-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .reviews-grid .review-card:last-child {
+        grid-column: 1 / -1;
+      }
+
       .audience-grid,
-      .services-grid,
-      .one-stop-grid {
+      .services-grid {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -705,8 +739,10 @@
         right: 0;
         bottom: 0;
         z-index: 1000;
+
         display: grid;
         grid-template-columns: 1fr 1fr;
+
         background: white;
         border-top: 1px solid #d7e0e6;
 
@@ -723,10 +759,13 @@
 
       .mobile-action-bar a {
         min-height: 50px;
+
         display: flex;
         align-items: center;
         justify-content: center;
+
         border-radius: 8px;
+
         font-size: 14px;
         font-weight: 900;
       }
@@ -742,6 +781,10 @@
         border: 2px solid var(--navy);
       }
     }
+
+    /*
+      MOBILE
+    */
 
     @media (max-width: 620px) {
 
@@ -762,6 +805,15 @@
         font-size: 10px;
       }
 
+      .hero-image {
+        min-height: 270px;
+      }
+
+      .hero-image img {
+        min-height: 270px;
+        height: 270px;
+      }
+
       .hero-business-name {
         font-size: 15px;
       }
@@ -771,7 +823,7 @@
       }
 
       .hero-copy {
-        padding: 40px 0 48px;
+        padding: 36px 0 46px;
       }
 
       h1 {
@@ -793,7 +845,7 @@
       }
 
       section {
-        padding: 56px 0;
+        padding: 54px 0;
       }
 
       .section-heading h2 {
@@ -802,9 +854,20 @@
 
       .reviews-grid,
       .audience-grid,
-      .services-grid,
-      .one-stop-grid {
+      .services-grid {
         grid-template-columns: 1fr;
+      }
+
+      .reviews-grid .review-card:last-child {
+        grid-column: auto;
+      }
+
+      .audience-photo {
+        height: 240px;
+      }
+
+      .service-photo {
+        height: 235px;
       }
 
       .cta-buttons,
@@ -957,7 +1020,7 @@
 
     <section class="hero">
 
-      <div class="container hero-inner">
+      <div class="container hero-grid">
 
         <div class="hero-copy">
 
@@ -978,9 +1041,8 @@
           </h1>
 
           <p>
-            Residential and commercial painting plus drywall,
-            molding and trim, wallpaper, and power washing —
-            all from one experienced local company.
+            Residential and commercial painting, repairs and finishing
+            from one experienced local company.
           </p>
 
           <div class="trust-row">
@@ -1040,6 +1102,15 @@
             </a>
 
           </div>
+
+        </div>
+
+        <div class="hero-image">
+
+          <img
+            src="hero-tudor.png"
+            alt="Tudor-style home representing residential painting and carpentry services in the Pittsburgh area"
+          >
 
         </div>
 
@@ -1165,9 +1236,8 @@
           </h2>
 
           <p>
-            Whether the project is a home, office, retail space,
-            rental property or commercial building, M.T. Christian Painting
-            can help complete more of the project with one company.
+            Whether the project is your home, business or investment property,
+            M.T. Christian Painting brings decades of experience to the job.
           </p>
 
         </div>
@@ -1176,82 +1246,59 @@
 
           <article class="audience-card">
 
-            <h3>
-              Residential Services
-            </h3>
+            <img
+              class="audience-photo"
+              src="residential-interior.png"
+              alt="Finished residential interior with freshly painted walls and trim"
+              loading="lazy"
+            >
 
-            <p>
-              Improve, update or repair the spaces you live in.
-            </p>
+            <div class="audience-content">
 
-            <ul class="check-list">
+              <h3>
+                Residential Services
+              </h3>
 
-              <li>
-                Interior painting
-              </li>
+              <p>
+                Professional work for the spaces you live in.
+              </p>
 
-              <li>
-                Exterior painting
-              </li>
+              <ul class="audience-points">
+                <li>Interior and exterior painting</li>
+                <li>Repairs and finish work</li>
+                <li>Homes and residential properties</li>
+              </ul>
 
-              <li>
-                Drywall installation and repair
-              </li>
-
-              <li>
-                Molding and trim installation or repair
-              </li>
-
-              <li>
-                Wallpaper installation and removal
-              </li>
-
-              <li>
-                Power washing
-              </li>
-
-            </ul>
+            </div>
 
           </article>
 
           <article class="audience-card">
 
-            <h3>
-              Commercial Services
-            </h3>
+            <img
+              class="audience-photo"
+              src="commercial-interior.png"
+              alt="Professional commercial office interior with freshly painted walls"
+              loading="lazy"
+            >
 
-            <p>
-              Professional service for businesses, property managers
-              and commercial properties.
-            </p>
+            <div class="audience-content">
 
-            <ul class="check-list">
+              <h3>
+                Commercial Services
+              </h3>
 
-              <li>
-                Offices and professional spaces
-              </li>
+              <p>
+                Professional service for businesses and property managers.
+              </p>
 
-              <li>
-                Retail and storefronts
-              </li>
+              <ul class="audience-points">
+                <li>Offices and professional spaces</li>
+                <li>Retail and storefronts</li>
+                <li>Rental and commercial properties</li>
+              </ul>
 
-              <li>
-                Apartment and rental properties
-              </li>
-
-              <li>
-                Commercial interior and exterior painting
-              </li>
-
-              <li>
-                Drywall installation and repair
-              </li>
-
-              <li>
-                Power washing
-              </li>
-
-            </ul>
+            </div>
 
           </article>
 
@@ -1279,8 +1326,7 @@
 
           <p>
             M.T. Christian Painting can handle several related parts
-            of the same project, reducing the need to coordinate
-            multiple contractors.
+            of your residential or commercial project.
           </p>
 
         </div>
@@ -1289,77 +1335,118 @@
 
           <article class="service-card">
 
-            <h3>
-              Painting
-            </h3>
+            <div class="service-card-content">
 
-            <p>
-              Professional painting for residential and commercial properties.
-            </p>
+              <h3>
+                Painting
+              </h3>
 
-            <ul class="service-list">
-              <li>Interior painting</li>
-              <li>Exterior painting</li>
-              <li>Residential properties</li>
-              <li>Commercial properties</li>
-            </ul>
+              <p>
+                Professional painting for homes, businesses and properties.
+              </p>
 
-          </article>
+              <ul class="service-list">
+                <li>Interior painting</li>
+                <li>Exterior painting</li>
+                <li>Residential painting</li>
+                <li>Commercial painting</li>
+              </ul>
 
-          <article class="service-card">
-
-            <h3>
-              Drywall
-            </h3>
-
-            <p>
-              Drywall services for homes, businesses and properties.
-            </p>
-
-            <ul class="service-list">
-              <li>Drywall installation</li>
-              <li>Drywall repair</li>
-            </ul>
+            </div>
 
           </article>
 
           <article class="service-card">
 
-            <h3>
-              Molding & Trim
-            </h3>
+            <div class="service-card-content">
 
-            <p>
-              Finish carpentry services for residential and commercial projects.
-            </p>
+              <h3>
+                Drywall
+              </h3>
 
-            <ul class="service-list">
-              <li>Molding installation</li>
-              <li>Molding repair</li>
-              <li>Trim installation</li>
-              <li>Trim repair</li>
-            </ul>
+              <p>
+                Drywall services for residential and commercial properties.
+              </p>
+
+              <ul class="service-list">
+                <li>Drywall installation</li>
+                <li>Drywall repair</li>
+              </ul>
+
+            </div>
 
           </article>
 
           <article class="service-card">
 
-            <h3>
-              Wallpaper & Power Washing
-            </h3>
+            <img
+              class="service-photo"
+              src="molding-trim.png"
+              alt="Finished molding and trim carpentry in a Pittsburgh-area home"
+              loading="lazy"
+            >
 
-            <p>
-              Additional services that help complete more of the project.
-            </p>
+            <div class="service-card-content">
 
-            <ul class="service-list">
-              <li>Wallpaper installation</li>
-              <li>Wallpaper removal</li>
-              <li>Residential power washing</li>
-              <li>Commercial power washing</li>
-            </ul>
+              <h3>
+                Molding & Trim
+              </h3>
+
+              <p>
+                Finish carpentry for residential and commercial projects.
+              </p>
+
+              <ul class="service-list">
+                <li>Molding installation</li>
+                <li>Molding repair</li>
+                <li>Trim installation</li>
+                <li>Trim repair</li>
+              </ul>
+
+            </div>
 
           </article>
+
+          <article class="service-card">
+
+            <img
+              class="service-photo"
+              src="wallpaper.png"
+              alt="Finished wallpaper installation in a professionally decorated interior"
+              loading="lazy"
+            >
+
+            <div class="service-card-content">
+
+              <h3>
+                Wallpaper & Power Washing
+              </h3>
+
+              <p>
+                Additional services that help complete more of the project.
+              </p>
+
+              <ul class="service-list">
+                <li>Wallpaper installation</li>
+                <li>Wallpaper removal</li>
+                <li>Residential power washing</li>
+                <li>Commercial power washing</li>
+              </ul>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <div class="one-company-note">
+
+          <strong>
+            More done with one company.
+          </strong>
+
+          Painting, drywall, trim, wallpaper and related services
+          can often be handled together — fewer contractors to coordinate.
 
         </div>
 
@@ -1367,90 +1454,7 @@
 
     </section>
 
-    <!-- ONE STOP -->
-
-    <section class="one-stop">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div
-            class="eyebrow"
-            style="color:#b9d5e9;"
-          >
-            Less Coordination. Fewer Contractors.
-          </div>
-
-          <h2>
-            One Call Can Handle More of the Project.
-          </h2>
-
-          <p>
-            Painting projects often overlap with drywall, trim,
-            wallpaper and exterior cleaning. M.T. Christian Painting
-            can provide those related services together.
-          </p>
-
-        </div>
-
-        <div class="one-stop-grid">
-
-          <div class="one-stop-item">
-
-            <strong>
-              Painting
-            </strong>
-
-            <span>
-              Interior, exterior, residential and commercial.
-            </span>
-
-          </div>
-
-          <div class="one-stop-item">
-
-            <strong>
-              Drywall
-            </strong>
-
-            <span>
-              Installation and repair.
-            </span>
-
-          </div>
-
-          <div class="one-stop-item">
-
-            <strong>
-              Molding & Trim
-            </strong>
-
-            <span>
-              Installation and repair.
-            </span>
-
-          </div>
-
-          <div class="one-stop-item">
-
-            <strong>
-              Wallpaper & Power Washing
-            </strong>
-
-            <span>
-              Wallpaper installation/removal and property power washing.
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- AREAS -->
+    <!-- SERVICE AREAS -->
 
     <section
       class="areas"
@@ -1522,7 +1526,7 @@
           </h2>
 
           <p>
-            Get straightforward information before requesting an estimate.
+            Straightforward information before you request an estimate.
           </p>
 
         </div>
@@ -1545,12 +1549,13 @@
           <details>
 
             <summary>
-              Can you install or repair drywall?
+              Can M.T. Christian Painting handle painting and repair work on the same project?
             </summary>
 
             <p>
-              Yes. Drywall installation and repair are available
-              for both residential and commercial projects.
+              Yes. Depending on the project, painting can be combined with
+              drywall installation or repair, molding and trim work,
+              wallpaper services and related work.
             </p>
 
           </details>
@@ -1558,38 +1563,12 @@
           <details>
 
             <summary>
-              Can you install or repair molding and trim?
+              How long has M.T. Christian Painting been in business?
             </summary>
 
             <p>
-              Yes. M.T. Christian Painting provides molding and trim
-              installation and repair.
-            </p>
-
-          </details>
-
-          <details>
-
-            <summary>
-              Do you install and remove wallpaper?
-            </summary>
-
-            <p>
-              Yes. Both wallpaper installation and wallpaper removal
-              are available.
-            </p>
-
-          </details>
-
-          <details>
-
-            <summary>
-              Do you provide power washing?
-            </summary>
-
-            <p>
-              Yes. Power washing is available for residential
-              and commercial properties.
+              M.T. Christian Painting has been serving Pittsburgh-area
+              customers since 1992.
             </p>
 
           </details>
@@ -1616,6 +1595,20 @@
             <p>
               M.T. Christian Painting serves Pittsburgh's South Hills,
               North Hills and surrounding communities.
+            </p>
+
+          </details>
+
+          <details>
+
+            <summary>
+              How do I get started?
+            </summary>
+
+            <p>
+              Call 412-613-4177 and tell us about your residential
+              or commercial project. We can answer your questions
+              and discuss the next step.
             </p>
 
           </details>
@@ -1708,6 +1701,8 @@
 
   </footer>
 
+  <!-- MOBILE ACTION BAR -->
+
   <div
     class="mobile-action-bar"
     aria-label="Contact M.T. Christian Painting"
@@ -1730,9 +1725,13 @@
   </div>
 
   <script>
+
     function toggleMenu(button) {
+
       const menu = document.getElementById("mobileNav");
-      const isOpen = menu.classList.toggle("open");
+
+      const isOpen =
+        menu.classList.toggle("open");
 
       button.setAttribute(
         "aria-expanded",
@@ -1740,15 +1739,29 @@
       );
     }
 
-    document.querySelectorAll("#mobileNav a").forEach(function(link) {
-      link.addEventListener("click", function() {
-        document.getElementById("mobileNav").classList.remove("open");
+    document
+      .querySelectorAll("#mobileNav a")
+      .forEach(function(link) {
 
-        document
-          .querySelector(".mobile-menu-button")
-          .setAttribute("aria-expanded", "false");
+        link.addEventListener(
+          "click",
+          function() {
+
+            document
+              .getElementById("mobileNav")
+              .classList
+              .remove("open");
+
+            document
+              .querySelector(".mobile-menu-button")
+              .setAttribute(
+                "aria-expanded",
+                "false"
+              );
+          }
+        );
       });
-    });
+
   </script>
 
 </body>
