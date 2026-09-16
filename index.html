@@ -1,1 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    M.T. Christian Painting | Painting & Carpentry Services Pittsburgh
+  </title>
+
+  <meta
+    name="description"
+    content="M.T. Christian Painting provides residential and commercial painting, drywall installation and repair, molding and trim work, wallpaper installation and removal, and power washing throughout Pittsburgh's South Hills, North Hills and surrounding communities. Free estimates. Call 412-613-4177."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy: #12375b;
+      --navy-dark: #0c2945;
+      --blue: #356f9f;
+      --light-blue: #edf5fa;
+      --white: #ffffff;
+      --off-white: #f8fafb;
+      --text: #202a33;
+      --muted: #5c6872;
+      --border: #dde5ea;
+      --gold: #e6aa28;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /*
+      TOP BAR
+    */
+
+    .topbar {
+      background: var(--navy-dark);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /*
+      HEADER
+    */
+
+    header {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand strong {
+      display: block;
+      color: var(--navy);
+      font-size: 22px;
+      line-height: 1.1;
+      letter-spacing: .3px;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .header-phone {
+      color: var(--navy);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    /*
+      BUTTONS
+    */
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 24px;
+      border-radius: 8px;
+      font-weight: 800;
+      text-align: center;
+      transition: .2s ease;
+    }
+
+    .button-primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--navy-dark);
+    }
+
+    .button-secondary {
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      background: white;
+    }
+
+    .button-secondary:hover {
+      background: var(--light-blue);
+    }
+
+    /*
+      HERO
+    */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #ffffff 55%,
+          #edf5fa 100%
+        );
+    }
+
+    .hero-inner {
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-copy {
+      max-width: 900px;
+      padding: 65px 0 70px;
+    }
+
+    .hero-business-name {
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .hero-business-subtitle {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.3px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      color: var(--navy-dark);
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.03;
+      letter-spacing: -2px;
+      max-width: 900px;
+    }
+
+    .hero-copy > p {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 760px;
+      margin-top: 22px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 30px 0;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .trust-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--light-blue);
+      color: var(--navy);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /*
+      STANDARD SECTIONS
+    */
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy-dark);
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 13px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /*
+      REVIEWS
+    */
+
+    .reviews {
+      background: var(--navy-dark);
+      color: white;
+    }
+
+    .reviews .section-heading h2,
+    .reviews .section-heading p {
+      color: white;
+    }
+
+    .reviews-summary {
+      color: var(--gold);
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-top: 12px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .review-card {
+      background: white;
+      color: var(--text);
+      padding: 28px;
+      border-radius: 14px;
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .review-card p {
+      color: #3f4c57;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .review-name {
+      color: var(--navy);
+      font-weight: 800;
+      margin-top: 18px;
+    }
+
+    .reviews-more {
+      text-align: center;
+      margin-top: 34px;
+    }
+
+    .reviews .button-secondary {
+      border-color: white;
+      color: white;
+      background: transparent;
+    }
+
+    /*
+      RESIDENTIAL / COMMERCIAL
+    */
+
+    .audience {
+      background: var(--off-white);
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .audience-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 34px;
+    }
+
+    .audience-card h3 {
+      color: var(--navy-dark);
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .audience-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 11px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    /*
+      SERVICES
+    */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: white;
+      padding: 30px;
+    }
+
+    .service-card h3 {
+      color: var(--navy-dark);
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+    }
+
+    .service-list {
+      margin-top: 14px;
+      list-style: none;
+      display: grid;
+      gap: 7px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .service-list li::before {
+      content: "✓";
+      color: var(--blue);
+      font-weight: 900;
+      margin-right: 8px;
+    }
+
+    /*
+      ONE STOP SHOP
+    */
+
+    .one-stop {
+      background: var(--navy);
+      color: white;
+    }
+
+    .one-stop .section-heading h2,
+    .one-stop .section-heading p {
+      color: white;
+    }
+
+    .one-stop-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .one-stop-item {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 12px;
+      padding: 23px;
+    }
+
+    .one-stop-item strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .one-stop-item span {
+      color: #dce9f2;
+      font-size: 14px;
+    }
+
+    /*
+      AREAS
+    */
+
+    .areas {
+      background: var(--off-white);
+    }
+
+    .area-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .area {
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: white;
+      color: var(--navy-dark);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /*
+      QUESTIONS
+    */
+
+    .questions {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    details {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--navy-dark);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    details p {
+      color: var(--muted);
+      padding-top: 13px;
+    }
+
+    .more-questions {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    /*
+      CTA
+    */
+
+    .cta {
+      background: var(--navy-dark);
+      color: white;
+      padding: 65px 0;
+    }
+
+    .cta-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      line-height: 1.1;
+      margin-bottom: 9px;
+    }
+
+    .cta p {
+      color: #d9e7f1;
+      font-size: 17px;
+      max-width: 650px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cta .button-primary {
+      background: white;
+      color: var(--navy);
+    }
+
+    .cta .button-secondary {
+      border-color: white;
+      color: white;
+      background: transparent;
+    }
+
+    /*
+      FOOTER
+    */
+
+    footer {
+      background: #081e31;
+      color: white;
+      padding: 38px 0 92px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .footer-brand strong {
+      font-size: 20px;
+    }
+
+    .footer-brand p,
+    .copyright {
+      color: #b7c7d3;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    /*
+      MOBILE NAV
+    */
+
+    .mobile-menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--navy);
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    .mobile-action-bar {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .mobile-menu-button {
+        display: block;
+      }
+
+      .mobile-nav.open {
+        display: grid;
+        background: white;
+        border-top: 1px solid var(--border);
+        padding: 8px 20px 18px;
+      }
+
+      .mobile-nav a {
+        padding: 13px 0;
+        border-bottom: 1px solid var(--border);
+        font-weight: 700;
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .hero-inner {
+        min-height: auto;
+      }
+
+      .hero-copy {
+        padding: 48px 0 55px;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+
+      .reviews-grid,
+      .audience-grid,
+      .services-grid,
+      .one-stop-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .mobile-action-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: white;
+        border-top: 1px solid #d7e0e6;
+
+        padding:
+          9px
+          10px
+          calc(9px + env(safe-area-inset-bottom));
+
+        gap: 8px;
+
+        box-shadow:
+          0 -4px 18px rgba(0, 0, 0, .12);
+      }
+
+      .mobile-action-bar a {
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .mobile-call {
+        background: var(--navy);
+        color: white;
+      }
+
+      .mobile-estimate {
+        background: var(--light-blue);
+        color: var(--navy-dark);
+        border: 2px solid var(--navy);
+      }
+    }
+
+    @media (max-width: 620px) {
+
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .topbar {
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .brand strong {
+        font-size: 18px;
+      }
+
+      .brand span {
+        font-size: 10px;
+      }
+
+      .hero-business-name {
+        font-size: 15px;
+      }
+
+      .hero-business-subtitle {
+        font-size: 11px;
+      }
+
+      .hero-copy {
+        padding: 40px 0 48px;
+      }
+
+      h1 {
+        font-size: 38px;
+        letter-spacing: -1px;
+      }
+
+      .hero-copy > p {
+        font-size: 18px;
+      }
+
+      .trust-row {
+        display: grid;
+      }
+
+      .hero-buttons,
+      .hero-buttons .button {
+        width: 100%;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .section-heading h2 {
+        font-size: 31px;
+      }
+
+      .reviews-grid,
+      .audience-grid,
+      .services-grid,
+      .one-stop-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons,
+      .cta-buttons .button {
+        width: 100%;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "M.T. Christian Painting",
+    "description": "Painting & Carpentry Services serving residential and commercial customers throughout Pittsburgh's South Hills, North Hills and surrounding communities.",
+    "telephone": "+1-412-613-4177",
+    "email": "mtchristianinc@hotmail.com",
+    "areaServed": [
+      "Upper Saint Clair",
+      "Mount Lebanon",
+      "McMurray",
+      "Peters Township",
+      "Canonsburg",
+      "Bethel Park",
+      "Castle Shannon",
+      "Pleasant Hills",
+      "West Mifflin",
+      "Baldwin",
+      "Whitehall",
+      "Squirrel Hill",
+      "Carnegie",
+      "Kennedy",
+      "Robinson",
+      "Moon",
+      "Cranberry",
+      "Seven Fields",
+      "Hampton",
+      "Shaler"
+    ]
+  }
+  </script>
+
+</head>
+
+<body>
+
+  <div class="topbar">
+    Residential & Commercial Service Throughout Pittsburgh's South Hills and North Hills
+  </div>
+
+  <header>
+
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html">
+
+        <strong>
+          M.T. CHRISTIAN PAINTING
+        </strong>
+
+        <span>
+          Painting & Carpentry Services
+        </span>
+
+      </a>
+
+      <nav>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#reviews">
+          Reviews
+        </a>
+
+        <a href="#areas">
+          Service Areas
+        </a>
+
+        <a href="#questions">
+          Questions
+        </a>
+
+        <a
+          href="tel:14126134177"
+          class="header-phone"
+        >
+          412-613-4177
+        </a>
+
+        <a
+          href="#estimate"
+          class="button button-primary"
+        >
+          Free Estimate
+        </a>
+
+      </nav>
+
+      <button
+        class="mobile-menu-button"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        onclick="toggleMenu(this)"
+      >
+        ☰
+      </button>
+
+    </div>
+
+    <div
+      class="mobile-nav"
+      id="mobileNav"
+    >
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#reviews">
+        Reviews
+      </a>
+
+      <a href="#areas">
+        Service Areas
+      </a>
+
+      <a href="#questions">
+        Questions
+      </a>
+
+      <a href="tel:14126134177">
+        Call 412-613-4177
+      </a>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="container hero-inner">
+
+        <div class="hero-copy">
+
+          <div class="hero-business-name">
+            M.T. CHRISTIAN PAINTING
+          </div>
+
+          <div class="hero-business-subtitle">
+            PAINTING & CARPENTRY SERVICES
+          </div>
+
+          <div class="eyebrow">
+            Residential & Commercial
+          </div>
+
+          <h1>
+            Painting, Repairs & Finishing — One Call Handles More.
+          </h1>
+
+          <p>
+            Residential and commercial painting plus drywall,
+            molding and trim, wallpaper, and power washing —
+            all from one experienced local company.
+          </p>
+
+          <div class="trust-row">
+
+            <div class="trust-item">
+
+              <span class="trust-icon">
+                ★
+              </span>
+
+              <span>
+                50+ Five-Star Customer Reviews
+              </span>
+
+            </div>
+
+            <div class="trust-item">
+
+              <span class="trust-icon">
+                ✓
+              </span>
+
+              <span>
+                Serving Pittsburgh-Area Customers Since 1992
+              </span>
+
+            </div>
+
+            <div class="trust-item">
+
+              <span class="trust-icon">
+                ✓
+              </span>
+
+              <span>
+                Free Estimates
+              </span>
+
+            </div>
+
+          </div>
+
+          <div class="hero-buttons">
+
+            <a
+              href="tel:14126134177"
+              class="button button-primary"
+            >
+              Call Today: 412-613-4177
+            </a>
+
+            <a
+              href="#estimate"
+              class="button button-secondary"
+            >
+              Get a Free Estimate
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- REVIEWS -->
+
+    <section
+      class="reviews"
+      id="reviews"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div
+            class="eyebrow"
+            style="color:#a9cae2;"
+          >
+            Real Local Customers
+          </div>
+
+          <h2>
+            Why Customers Choose M.T. Christian Painting
+          </h2>
+
+          <p>
+            Residential and commercial customers throughout the Pittsburgh area
+            have trusted M.T. Christian Painting for decades.
+          </p>
+
+          <div class="reviews-summary">
+            ★★★★★ 50+ Five-Star Customer Reviews
+          </div>
+
+        </div>
+
+        <div class="reviews-grid">
+
+          <article class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              “Quick, clean, and super professional.”
+            </p>
+
+            <div class="review-name">
+              Jessica L. — Peters Township
+            </div>
+
+          </article>
+
+          <article class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              “Reliable commercial partner. Completed the project
+              on time and strictly within our budget constraints.”
+            </p>
+
+            <div class="review-name">
+              Jordan F. — Castle Shannon
+            </div>
+
+          </article>
+
+          <article class="review-card">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              “Great price, great communication, great job!”
+            </p>
+
+            <div class="review-name">
+              Megan C. — Squirrel Hill
+            </div>
+
+          </article>
+
+        </div>
+
+        <div class="reviews-more">
+
+          <a
+            href="reviews.html"
+            class="button button-secondary"
+          >
+            See More Customer Reviews
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- RESIDENTIAL / COMMERCIAL -->
+
+    <section class="audience">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            Residential & Commercial
+          </div>
+
+          <h2>
+            Experienced Service for Homes and Businesses
+          </h2>
+
+          <p>
+            Whether the project is a home, office, retail space,
+            rental property or commercial building, M.T. Christian Painting
+            can help complete more of the project with one company.
+          </p>
+
+        </div>
+
+        <div class="audience-grid">
+
+          <article class="audience-card">
+
+            <h3>
+              Residential Services
+            </h3>
+
+            <p>
+              Improve, update or repair the spaces you live in.
+            </p>
+
+            <ul class="check-list">
+
+              <li>
+                Interior painting
+              </li>
+
+              <li>
+                Exterior painting
+              </li>
+
+              <li>
+                Drywall installation and repair
+              </li>
+
+              <li>
+                Molding and trim installation or repair
+              </li>
+
+              <li>
+                Wallpaper installation and removal
+              </li>
+
+              <li>
+                Power washing
+              </li>
+
+            </ul>
+
+          </article>
+
+          <article class="audience-card">
+
+            <h3>
+              Commercial Services
+            </h3>
+
+            <p>
+              Professional service for businesses, property managers
+              and commercial properties.
+            </p>
+
+            <ul class="check-list">
+
+              <li>
+                Offices and professional spaces
+              </li>
+
+              <li>
+                Retail and storefronts
+              </li>
+
+              <li>
+                Apartment and rental properties
+              </li>
+
+              <li>
+                Commercial interior and exterior painting
+              </li>
+
+              <li>
+                Drywall installation and repair
+              </li>
+
+              <li>
+                Power washing
+              </li>
+
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            One-Stop Service
+          </div>
+
+          <h2>
+            More Than Just Painting
+          </h2>
+
+          <p>
+            M.T. Christian Painting can handle several related parts
+            of the same project, reducing the need to coordinate
+            multiple contractors.
+          </p>
+
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+
+            <h3>
+              Painting
+            </h3>
+
+            <p>
+              Professional painting for residential and commercial properties.
+            </p>
+
+            <ul class="service-list">
+              <li>Interior painting</li>
+              <li>Exterior painting</li>
+              <li>Residential properties</li>
+              <li>Commercial properties</li>
+            </ul>
+
+          </article>
+
+          <article class="service-card">
+
+            <h3>
+              Drywall
+            </h3>
+
+            <p>
+              Drywall services for homes, businesses and properties.
+            </p>
+
+            <ul class="service-list">
+              <li>Drywall installation</li>
+              <li>Drywall repair</li>
+            </ul>
+
+          </article>
+
+          <article class="service-card">
+
+            <h3>
+              Molding & Trim
+            </h3>
+
+            <p>
+              Finish carpentry services for residential and commercial projects.
+            </p>
+
+            <ul class="service-list">
+              <li>Molding installation</li>
+              <li>Molding repair</li>
+              <li>Trim installation</li>
+              <li>Trim repair</li>
+            </ul>
+
+          </article>
+
+          <article class="service-card">
+
+            <h3>
+              Wallpaper & Power Washing
+            </h3>
+
+            <p>
+              Additional services that help complete more of the project.
+            </p>
+
+            <ul class="service-list">
+              <li>Wallpaper installation</li>
+              <li>Wallpaper removal</li>
+              <li>Residential power washing</li>
+              <li>Commercial power washing</li>
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ONE STOP -->
+
+    <section class="one-stop">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div
+            class="eyebrow"
+            style="color:#b9d5e9;"
+          >
+            Less Coordination. Fewer Contractors.
+          </div>
+
+          <h2>
+            One Call Can Handle More of the Project.
+          </h2>
+
+          <p>
+            Painting projects often overlap with drywall, trim,
+            wallpaper and exterior cleaning. M.T. Christian Painting
+            can provide those related services together.
+          </p>
+
+        </div>
+
+        <div class="one-stop-grid">
+
+          <div class="one-stop-item">
+
+            <strong>
+              Painting
+            </strong>
+
+            <span>
+              Interior, exterior, residential and commercial.
+            </span>
+
+          </div>
+
+          <div class="one-stop-item">
+
+            <strong>
+              Drywall
+            </strong>
+
+            <span>
+              Installation and repair.
+            </span>
+
+          </div>
+
+          <div class="one-stop-item">
+
+            <strong>
+              Molding & Trim
+            </strong>
+
+            <span>
+              Installation and repair.
+            </span>
+
+          </div>
+
+          <div class="one-stop-item">
+
+            <strong>
+              Wallpaper & Power Washing
+            </strong>
+
+            <span>
+              Wallpaper installation/removal and property power washing.
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- AREAS -->
+
+    <section
+      class="areas"
+      id="areas"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            Local Service
+          </div>
+
+          <h2>
+            Serving Pittsburgh's South Hills & North Hills
+          </h2>
+
+          <p>
+            Residential and commercial painting and related services
+            are available throughout these Pittsburgh-area communities.
+          </p>
+
+        </div>
+
+        <div class="area-list">
+
+          <span class="area">Upper Saint Clair</span>
+          <span class="area">Mount Lebanon</span>
+          <span class="area">McMurray</span>
+          <span class="area">Peters Township</span>
+          <span class="area">Canonsburg</span>
+          <span class="area">Bethel Park</span>
+          <span class="area">Castle Shannon</span>
+          <span class="area">Pleasant Hills</span>
+          <span class="area">West Mifflin</span>
+          <span class="area">Baldwin</span>
+          <span class="area">Whitehall</span>
+          <span class="area">Squirrel Hill</span>
+          <span class="area">Carnegie</span>
+          <span class="area">Kennedy</span>
+          <span class="area">Robinson</span>
+          <span class="area">Moon</span>
+          <span class="area">Cranberry</span>
+          <span class="area">Seven Fields</span>
+          <span class="area">Hampton</span>
+          <span class="area">Shaler</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- QUESTIONS -->
+
+    <section id="questions">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            Common Questions
+          </div>
+
+          <h2>
+            Questions Customers Ask Before They Hire Us
+          </h2>
+
+          <p>
+            Get straightforward information before requesting an estimate.
+          </p>
+
+        </div>
+
+        <div class="questions">
+
+          <details>
+
+            <summary>
+              Do you handle both residential and commercial projects?
+            </summary>
+
+            <p>
+              Yes. M.T. Christian Painting works with homeowners,
+              businesses, property managers and commercial properties.
+            </p>
+
+          </details>
+
+          <details>
+
+            <summary>
+              Can you install or repair drywall?
+            </summary>
+
+            <p>
+              Yes. Drywall installation and repair are available
+              for both residential and commercial projects.
+            </p>
+
+          </details>
+
+          <details>
+
+            <summary>
+              Can you install or repair molding and trim?
+            </summary>
+
+            <p>
+              Yes. M.T. Christian Painting provides molding and trim
+              installation and repair.
+            </p>
+
+          </details>
+
+          <details>
+
+            <summary>
+              Do you install and remove wallpaper?
+            </summary>
+
+            <p>
+              Yes. Both wallpaper installation and wallpaper removal
+              are available.
+            </p>
+
+          </details>
+
+          <details>
+
+            <summary>
+              Do you provide power washing?
+            </summary>
+
+            <p>
+              Yes. Power washing is available for residential
+              and commercial properties.
+            </p>
+
+          </details>
+
+          <details>
+
+            <summary>
+              Do you provide free estimates?
+            </summary>
+
+            <p>
+              Yes. Call 412-613-4177 to discuss your project
+              and request a free estimate.
+            </p>
+
+          </details>
+
+          <details>
+
+            <summary>
+              What areas do you serve?
+            </summary>
+
+            <p>
+              M.T. Christian Painting serves Pittsburgh's South Hills,
+              North Hills and surrounding communities.
+            </p>
+
+          </details>
+
+          <div class="more-questions">
+
+            <a
+              href="questions.html"
+              class="button button-secondary"
+            >
+              See More Common Questions
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FINAL CTA -->
+
+    <section
+      class="cta"
+      id="estimate"
+    >
+
+      <div class="container cta-inner">
+
+        <div>
+
+          <h2>
+            Have a Residential or Commercial Project in Mind?
+          </h2>
+
+          <p>
+            Tell us what you need done. We’ll answer your questions
+            and provide a free estimate.
+          </p>
+
+        </div>
+
+        <div class="cta-buttons">
+
+          <a
+            href="tel:14126134177"
+            class="button button-primary"
+          >
+            Call Today: 412-613-4177
+          </a>
+
+          <a
+            href="mailto:mtchristianinc@hotmail.com"
+            class="button button-secondary"
+          >
+            Request a Free Estimate
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <strong>
+          M.T. Christian Painting
+        </strong>
+
+        <p>
+          Painting & Carpentry Services for residential and commercial
+          customers throughout Pittsburgh's South Hills and North Hills.
+        </p>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 M.T. Christian Painting
+      </div>
+
+    </div>
+
+  </footer>
+
+  <div
+    class="mobile-action-bar"
+    aria-label="Contact M.T. Christian Painting"
+  >
+
+    <a
+      href="tel:14126134177"
+      class="mobile-call"
+    >
+      ☎ Call Today
+    </a>
+
+    <a
+      href="#estimate"
+      class="mobile-estimate"
+    >
+      Free Estimate
+    </a>
+
+  </div>
+
+  <script>
+    function toggleMenu(button) {
+      const menu = document.getElementById("mobileNav");
+      const isOpen = menu.classList.toggle("open");
+
+      button.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+    }
+
+    document.querySelectorAll("#mobileNav a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        document.getElementById("mobileNav").classList.remove("open");
+
+        document
+          .querySelector(".mobile-menu-button")
+          .setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+
+</body>
+</html>
