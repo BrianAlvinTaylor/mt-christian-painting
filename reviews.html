@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    M.T. Christian Painting Reviews | Pittsburgh Painting & Carpentry
+  </title>
+
+  <meta
+    name="description"
+    content="Read customer reviews for M.T. Christian Painting. Residential and commercial painting, drywall, molding and trim, wallpaper, and related services throughout Pittsburgh's South Hills and North Hills."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy: #12375b;
+      --navy-dark: #0c2945;
+      --blue: #356f9f;
+      --light-blue: #edf5fa;
+      --white: #ffffff;
+      --off-white: #f8fafb;
+      --text: #202a33;
+      --muted: #5c6872;
+      --border: #dde5ea;
+      --gold: #e6aa28;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+      background: var(--off-white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--navy-dark);
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand strong {
+      display: block;
+      color: var(--navy);
+      font-size: 22px;
+      line-height: 1.1;
+      letter-spacing: .3px;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .header-phone {
+      color: var(--navy);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 24px;
+      border-radius: 8px;
+      font-weight: 800;
+      text-align: center;
+      transition: .2s ease;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .button-primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--navy-dark);
+    }
+
+    .button-secondary {
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      background: white;
+    }
+
+    .reviews-hero {
+      background: var(--navy-dark);
+      color: white;
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: #a9cae2;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.3px;
+      margin-bottom: 12px;
+    }
+
+    .reviews-hero h1 {
+      font-size: clamp(42px, 6vw, 64px);
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .reviews-hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #dce8f0;
+      font-size: 18px;
+    }
+
+    .rating-line {
+      color: var(--gold);
+      font-size: 23px;
+      font-weight: 900;
+      margin-top: 20px;
+      letter-spacing: 1px;
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .reviews-hero .button-primary {
+      background: white;
+      color: var(--navy-dark);
+    }
+
+    .reviews-hero .button-secondary {
+      border-color: white;
+      color: white;
+      background: transparent;
+    }
+
+    .review-section {
+      padding: 65px 0 80px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .review-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px;
+      box-shadow: 0 6px 18px rgba(12, 41, 69, .05);
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 19px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .review-text {
+      color: #3d4953;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .review-name {
+      color: var(--navy-dark);
+      font-weight: 800;
+      margin-top: 18px;
+    }
+
+    .review-card.hidden-review {
+      display: none;
+    }
+
+    .show-more-wrap {
+      text-align: center;
+      margin-top: 38px;
+    }
+
+    .cta {
+      background: var(--navy);
+      color: white;
+      padding: 60px 0;
+    }
+
+    .cta-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      font-size: 34px;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: #dce8f0;
+      max-width: 650px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cta .button-primary {
+      background: white;
+      color: var(--navy-dark);
+    }
+
+    .cta .button-secondary {
+      border-color: white;
+      color: white;
+      background: transparent;
+    }
+
+    footer {
+      background: #081e31;
+      color: white;
+      padding: 38px 0 92px;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .footer-brand strong {
+      font-size: 20px;
+    }
+
+    .footer-brand p,
+    .copyright {
+      color: #b7c7d3;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .mobile-menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--navy);
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    .mobile-action-bar {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .mobile-menu-button {
+        display: block;
+      }
+
+      .mobile-nav.open {
+        display: grid;
+        background: white;
+        border-top: 1px solid var(--border);
+        padding: 8px 20px 18px;
+      }
+
+      .mobile-nav a {
+        padding: 13px 0;
+        border-bottom: 1px solid var(--border);
+        font-weight: 700;
+      }
+
+      .review-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .mobile-action-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+
+        padding:
+          9px
+          10px
+          calc(9px + env(safe-area-inset-bottom));
+
+        background: white;
+        border-top: 1px solid #d7e0e6;
+
+        box-shadow:
+          0 -4px 18px rgba(0, 0, 0, .12);
+      }
+
+      .mobile-action-bar a {
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .mobile-call {
+        background: var(--navy);
+        color: white;
+      }
+
+      .mobile-estimate {
+        background: var(--light-blue);
+        color: var(--navy-dark);
+        border: 2px solid var(--navy);
+      }
+    }
+
+    @media (max-width: 620px) {
+
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .topbar {
+        font-size: 12px;
+      }
+
+      .brand strong {
+        font-size: 18px;
+      }
+
+      .brand span {
+        font-size: 10px;
+      }
+
+      .reviews-hero {
+        padding: 52px 0;
+      }
+
+      .reviews-hero h1 {
+        font-size: 40px;
+      }
+
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons,
+      .cta-buttons .button {
+        width: 100%;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="topbar">
+    Residential & Commercial Service Throughout Pittsburgh's South Hills and North Hills
+  </div>
+
+  <header>
+
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html">
+
+        <strong>
+          M.T. CHRISTIAN PAINTING
+        </strong>
+
+        <span>
+          Painting & Carpentry Services
+        </span>
+
+      </a>
+
+      <nav>
+
+        <a href="index.html#services">
+          Services
+        </a>
+
+        <a href="reviews.html">
+          Reviews
+        </a>
+
+        <a href="index.html#areas">
+          Service Areas
+        </a>
+
+        <a href="index.html#questions">
+          Questions
+        </a>
+
+        <a
+          href="tel:14126134177"
+          class="header-phone"
+        >
+          412-613-4177
+        </a>
+
+        <a
+          href="index.html#estimate"
+          class="button button-primary"
+        >
+          Free Estimate
+        </a>
+
+      </nav>
+
+      <button
+        class="mobile-menu-button"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        onclick="toggleMenu(this)"
+      >
+        ☰
+      </button>
+
+    </div>
+
+    <div
+      class="mobile-nav"
+      id="mobileNav"
+    >
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#services">
+        Services
+      </a>
+
+      <a href="index.html#areas">
+        Service Areas
+      </a>
+
+      <a href="index.html#questions">
+        Questions
+      </a>
+
+      <a href="tel:14126134177">
+        Call 412-613-4177
+      </a>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="reviews-hero">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Real Local Customer Feedback
+        </div>
+
+        <h1>
+          Customer Reviews
+        </h1>
+
+        <p>
+          Residential and commercial customers throughout the Pittsburgh area
+          share their experience with M.T. Christian Painting.
+        </p>
+
+        <div class="rating-line">
+          ★★★★★ 100 Customer Reviews
+        </div>
+
+        <div class="hero-actions">
+
+          <a
+            href="tel:14126134177"
+            class="button button-primary"
+          >
+            Call Today: 412-613-4177
+          </a>
+
+          <a
+            href="index.html#estimate"
+            class="button button-secondary"
+          >
+            Get a Free Estimate
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="review-section">
+
+      <div class="container">
+
+        <div class="review-grid" id="reviewGrid">
+
+          <!-- 1 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Great work and five-star service from M.T. Christian Painting.
+            </div>
+            <div class="review-name">
+              Mark S. — Upper Saint Clair
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Beautiful home transformation. M.T. Christian Painting painted our entire downstairs and it looks stunning.
+            </div>
+            <div class="review-name">
+              Ryan B. — Upper Saint Clair
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Excellent commercial contractor. Our retail storefront was painted beautifully and the finished result was phenomenal.
+            </div>
+            <div class="review-name">
+              Austin S. — Upper Saint Clair
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              More than three decades of experience really shows in the level of expertise brought to the job site.
+            </div>
+            <div class="review-name">
+              Seth B. — Upper Saint Clair
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our home was treated with genuine care, including thoughtful consideration for an elderly family member. The walls look incredible and the entire experience was exceptional.
+            </div>
+            <div class="review-name">
+              Arthur S. — Upper Saint Clair
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Absolutely fantastic job all around.
+            </div>
+            <div class="review-name">
+              Sarah M. — Mount Lebanon
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Clean and tidy. I was worried about the mess, but M.T. Christian Painting left my house cleaner than it was before the project.
+            </div>
+            <div class="review-name">
+              Melissa P. — Mount Lebanon
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our office stayed operational because the work was completed after hours without disrupting the business.
+            </div>
+            <div class="review-name">
+              Kimberly M. — Mount Lebanon
+            </div>
+          </article>
+
+          <!-- 9 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              A true Pittsburgh-area business with a strong local reputation and consistently excellent work.
+            </div>
+            <div class="review-name">
+              Victoria P. — Mount Lebanon
+            </div>
+          </article>
+
+          <!-- 10 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              When our shop suffered minor water damage, M.T. Christian Painting responded quickly, repaired and painted the wall, and stayed late so we could reopen on time.
+            </div>
+            <div class="review-name">
+              Julia M. — Mount Lebanon
+            </div>
+          </article>
+
+          <!-- 11 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              One of the best painting experiences we have had in the Pittsburgh area.
+            </div>
+            <div class="review-name">
+              David K. — McMurray
+            </div>
+          </article>
+
+          <!-- 12 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Great with older Pittsburgh homes. The team clearly understands how to work with older plaster walls.
+            </div>
+            <div class="review-name">
+              Eric D. — McMurray
+            </div>
+          </article>
+
+          <!-- 13 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              High-quality warehouse painting. A large-scale job was handled professionally and efficiently.
+            </div>
+            <div class="review-name">
+              Christian B. — McMurray
+            </div>
+          </article>
+
+          <!-- 14 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Incredible work ethic and attention to the final result.
+            </div>
+            <div class="review-name">
+              Jared D. — McMurray
+            </div>
+          </article>
+
+          <!-- 15 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              M.T. Christian Painting worked on our first home decades ago and later completed our retirement condo. The quality and work ethic remained outstanding across more than 30 years.
+            </div>
+            <div class="review-name">
+              Raymond K. — McMurray
+            </div>
+          </article>
+
+          <!-- 16 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Quick, clean, and super professional.
+            </div>
+            <div class="review-name">
+              Jessica L. — Peters Township
+            </div>
+          </article>
+
+          <!-- 17 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Stunning kitchen cabinet refresh. Painting the cabinets instead of replacing them saved us thousands.
+            </div>
+            <div class="review-name">
+              Tiffany S. — Peters Township
+            </div>
+          </article>
+
+          <!-- 18 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Excellent choice for property managers. M.T. Christian Painting handles our apartment turnovers consistently.
+            </div>
+            <div class="review-name">
+              Christina L. — Peters Township
+            </div>
+          </article>
+
+          <!-- 19 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Excellent paint knowledge, including clear recommendations for products suited to Western Pennsylvania weather.
+            </div>
+            <div class="review-name">
+              Chloe S. — Peters Township
+            </div>
+          </article>
+
+          <!-- 20 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              During an exterior trim project, a loose piece of siding was noticed and repaired as well. Honest, thoughtful service and excellent workmanship.
+            </div>
+            <div class="review-name">
+              Evelyn L. — Peters Township
+            </div>
+          </article>
+
+          <!-- 21 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Highly recommended for any painting project.
+            </div>
+            <div class="review-name">
+              Robert B. — Canonsburg
+            </div>
+          </article>
+
+          <!-- 22 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Perfect living room walls with incredibly clean, straight lines near the ceiling.
+            </div>
+            <div class="review-name">
+              Justin H. — Canonsburg
+            </div>
+          </article>
+
+          <!-- 23 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Professional office refresh. The new conference-room accent walls look incredibly sharp.
+            </div>
+            <div class="review-name">
+              Dylan W. — Canonsburg
+            </div>
+          </article>
+
+          <!-- 24 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Punctual and reliable. The workday started on time every single morning.
+            </div>
+            <div class="review-name">
+              Blake H. — Canonsburg
+            </div>
+          </article>
+
+          <!-- 25 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              M.T. Christian Painting has completed work for several homes on our block. The company is friendly, dependable and consistently leaves behind excellent results.
+            </div>
+            <div class="review-name">
+              Dennis B. — Canonsburg
+            </div>
+          </article>
+
+          <!-- 26 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Great experience from start to finish.
+            </div>
+            <div class="review-name">
+              Emily W. — Bethel Park
+            </div>
+          </article>
+
+          <!-- 27 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Wonderful exterior work. Our aluminum siding was refreshed and the difference in curb appeal is incredible.
+            </div>
+            <div class="review-name">
+              Amber W. — Bethel Park
+            </div>
+          </article>
+
+          <!-- 28 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Fast turnaround. Our entire medical clinic was painted over a single weekend.
+            </div>
+            <div class="review-name">
+              Haley H. — Bethel Park
+            </div>
+          </article>
+
+          <!-- 29 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              The preparation work was flawless and clearly contributed to the quality of the finished paint job.
+            </div>
+            <div class="review-name">
+              Faith W. — Bethel Park
+            </div>
+          </article>
+
+          <!-- 30 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              We changed our living-room color several times and received patient guidance, sample swatches and helpful advice about how the lighting affected each choice.
+            </div>
+            <div class="review-name">
+              Alice W. — Bethel Park
+            </div>
+          </article>
+
+          <!-- 31 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Superb quality. We will definitely hire M.T. Christian Painting again.
+            </div>
+            <div class="review-name">
+              James H. — Castle Shannon
+            </div>
+          </article>
+
+          <!-- 32 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Extremely respectful while working inside our home, including being considerate of our pets.
+            </div>
+            <div class="review-name">
+              Brandon K. — Castle Shannon
+            </div>
+          </article>
+
+          <!-- 33 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Reliable commercial partner. The project was completed on time and within budget.
+            </div>
+            <div class="review-name">
+              Jordan F. — Castle Shannon
+            </div>
+          </article>
+
+          <!-- 34 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Detailed estimate with no hidden fees or surprise costs at the end.
+            </div>
+            <div class="review-name">
+              Cole K. — Castle Shannon
+            </div>
+          </article>
+
+          <!-- 35 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our community-center workspace was carefully evaluated and finished with a durable, washable paint that still feels warm and inviting.
+            </div>
+            <div class="review-name">
+              Philip H. — Castle Shannon
+            </div>
+          </article>
+
+          <!-- 36 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our house looks brand new. Excellent transformation.
+            </div>
+            <div class="review-name">
+              Amanda F. — Pleasant Hills
+            </div>
+          </article>
+
+          <!-- 37 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Peeling paint was handled correctly, with plenty of time spent preparing the walls before painting began.
+            </div>
+            <div class="review-name">
+              Danielle F. — Pleasant Hills
+            </div>
+          </article>
+
+          <!-- 38 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              The industrial finishes applied to our floors have held up extremely well.
+            </div>
+            <div class="review-name">
+              Marissa T. — Pleasant Hills
+            </div>
+          </article>
+
+          <!-- 39 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Decades of experience are evident in the quality and consistency of the finished work.
+            </div>
+            <div class="review-name">
+              Taylor F. — Pleasant Hills
+            </div>
+          </article>
+
+          <!-- 40 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              We chose M.T. Christian Painting because of the company's long experience. The professionalism, respectful crew and finished result confirmed we made the right choice.
+            </div>
+            <div class="review-name">
+              Gloria F. — Pleasant Hills
+            </div>
+          </article>
+
+          <!-- 41 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Excellent service and a great overall experience.
+            </div>
+            <div class="review-name">
+              Michael T. — West Mifflin
+            </div>
+          </article>
+
+          <!-- 42 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Great color guidance helped us choose the right shade for a dim hallway.
+            </div>
+            <div class="review-name">
+              Kyle L. — West Mifflin
+            </div>
+          </article>
+
+          <!-- 43 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Excellent communication with daily progress updates throughout our multi-floor office project.
+            </div>
+            <div class="review-name">
+              Nathan G. — West Mifflin
+            </div>
+          </article>
+
+          <!-- 44 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Outstanding attention to small imperfections that other painters might overlook.
+            </div>
+            <div class="review-name">
+              Chase L. — West Mifflin
+            </div>
+          </article>
+
+          <!-- 45 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our 100-year-old home had badly cracked plaster. The walls were carefully repaired before painting and the historic character of the home was preserved beautifully.
+            </div>
+            <div class="review-name">
+              Lawrence T. — West Mifflin
+            </div>
+          </article>
+
+          <!-- 46 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Flawless work and a great finished result.
+            </div>
+            <div class="review-name">
+              Ashley G. — Baldwin
+            </div>
+          </article>
+
+          <!-- 47 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our nursery was transformed beautifully, including the low-VOC paint we specifically requested.
+            </div>
+            <div class="review-name">
+              Rebecca T. — Baldwin
+            </div>
+          </article>
+
+          <!-- 48 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Strong safety standards and professional conduct throughout the job.
+            </div>
+            <div class="review-name">
+              Hannah R. — Baldwin
+            </div>
+          </article>
+
+          <!-- 49 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              True craftsmanship. The finished work shows years of experience and care.
+            </div>
+            <div class="review-name">
+              Sydney T. — Baldwin
+            </div>
+          </article>
+
+          <!-- 50 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Renovation projects can be stressful, but this one was easy. Communication was excellent and the space was cleaned thoroughly every evening.
+            </div>
+            <div class="review-name">
+              Rose G. — Baldwin
+            </div>
+          </article>
+
+          <!-- 51 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Excellent local work. The decades of experience really show.
+            </div>
+            <div class="review-name">
+              Brian R. — Whitehall
+            </div>
+          </article>
+
+          <!-- 52 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Excellent deck staining. Our back deck looks beautiful and ready for another Pittsburgh winter.
+            </div>
+            <div class="review-name">
+              Tyler M. — Whitehall
+            </div>
+          </article>
+
+          <!-- 53 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our historic church sanctuary was handled with exceptional care.
+            </div>
+            <div class="review-name">
+              Gabriel C. — Whitehall
+            </div>
+          </article>
+
+          <!-- 54 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Polite, friendly and honest. Exactly the kind of local contractor we wanted to work with.
+            </div>
+            <div class="review-name">
+              Gavin M. — Whitehall
+            </div>
+          </article>
+
+          <!-- 55 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our dark basement became a bright, beautiful playroom, including a creative chalkboard wall for the kids.
+            </div>
+            <div class="review-name">
+              Walter M. — Whitehall
+            </div>
+          </article>
+
+          <!-- 56 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Great price, great communication, great job.
+            </div>
+            <div class="review-name">
+              Megan C. — Squirrel Hill
+            </div>
+          </article>
+
+          <!-- 57 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Meticulous trim work. The baseboards and crown molding look pristine.
+            </div>
+            <div class="review-name">
+              Samantha C. — Squirrel Hill
+            </div>
+          </article>
+
+          <!-- 58 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our restaurant dining room received a clean, modern refresh and looks excellent.
+            </div>
+            <div class="review-name">
+              Morgan P. — Squirrel Hill
+            </div>
+          </article>
+
+          <!-- 59 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Excellent cleanup. You would never know a painting crew had been working in the space for a week.
+            </div>
+            <div class="review-name">
+              Mia C. — Squirrel Hill
+            </div>
+          </article>
+
+          <!-- 60 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              We were extremely concerned about our new hardwood floors. Everything was protected carefully and not a single drop of paint landed where it did not belong.
+            </div>
+            <div class="review-name">
+              Lillian C. — Squirrel Hill
+            </div>
+          </article>
+
+          <!-- 61 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Ten-out-of-ten service and very professional.
+            </div>
+            <div class="review-name">
+              Kevin P. — Carnegie
+            </div>
+          </article>
+
+          <!-- 62 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Three bedrooms were completed quickly and efficiently in just two days.
+            </div>
+            <div class="review-name">
+              Aaron G. — Carnegie
+            </div>
+          </article>
+
+          <!-- 63 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our commercial brick exterior looks excellent after power washing and painting.
+            </div>
+            <div class="review-name">
+              Logan D. — Carnegie
+            </div>
+          </article>
+
+          <!-- 64 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Consistent five-star quality across several different properties over the years.
+            </div>
+            <div class="review-name">
+              Tanner G. — Carnegie
+            </div>
+          </article>
+
+          <!-- 65 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Daily progress pictures while I was at work gave me complete peace of mind throughout the project.
+            </div>
+            <div class="review-name">
+              Louis G. — Carnegie
+            </div>
+          </article>
+
+          <!-- 66 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              M.T. Christian Painting did an amazing job on our living room.
+            </div>
+            <div class="review-name">
+              Rachel D. — Kennedy
+            </div>
+          </article>
+
+          <!-- 67 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Fair pricing and strong experience made M.T. Christian Painting the best choice among several estimates.
+            </div>
+            <div class="review-name">
+              Lauren R. — Kennedy
+            </div>
+          </article>
+
+          <!-- 68 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              A large painting project for a local school district was coordinated smoothly and professionally.
+            </div>
+            <div class="review-name">
+              Kaitlyn N. — Kennedy
+            </div>
+          </article>
+
+          <!-- 69 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              A seamless experience from the first phone call through the final invoice.
+            </div>
+            <div class="review-name">
+              Destiny R. — Kennedy
+            </div>
+          </article>
+
+          <!-- 70 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              After our own attempt at painting a two-story foyer went badly, M.T. Christian Painting fixed the uneven lines and made the entire space look professional.
+            </div>
+            <div class="review-name">
+              Grace R. — Kennedy
+            </div>
+          </article>
+
+          <!-- 71 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Prompt, professional and polite.
+            </div>
+            <div class="review-name">
+              John N. — Robinson
+            </div>
+          </article>
+
+          <!-- 72 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Master-level craftsmanship backed by more than three decades of experience.
+            </div>
+            <div class="review-name">
+              Zachary V. — Robinson
+            </div>
+          </article>
+
+          <!-- 73 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Clean commercial execution with no overspray or splatters, just crisp professional lines.
+            </div>
+            <div class="review-name">
+              Caleb V. — Robinson
+            </div>
+          </article>
+
+          <!-- 74 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              A great local business that clearly cares about the surrounding community.
+            </div>
+            <div class="review-name">
+              Parker V. — Robinson
+            </div>
+          </article>
+
+          <!-- 75 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our firm offices were painted quietly and professionally around our client schedule, with a high-end finished result.
+            </div>
+            <div class="review-name">
+              Roy V. — Robinson
+            </div>
+          </article>
+
+          <!-- 76 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Highly recommend M.T. Christian Painting.
+            </div>
+            <div class="review-name">
+              Nicole V. — Moon
+            </div>
+          </article>
+
+          <!-- 77 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Old wallpaper was removed and the drywall was restored so well that the walls looked brand new.
+            </div>
+            <div class="review-name">
+              Chelsea J. — Moon
+            </div>
+          </article>
+
+          <!-- 78 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Transparent, detailed and competitive commercial pricing.
+            </div>
+            <div class="review-name">
+              Brooke Z. — Moon
+            </div>
+          </article>
+
+          <!-- 79 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              M.T. Christian Painting sets an exceptionally high standard for professional contractors.
+            </div>
+            <div class="review-name">
+              Sierra J. — Moon
+            </div>
+          </article>
+
+          <!-- 80 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              We wanted to recreate a discontinued historic color for our front door. Extra time was spent matching it carefully and the final result was exactly what we wanted.
+            </div>
+            <div class="review-name">
+              Florence Z. — Moon
+            </div>
+          </article>
+
+          <!-- 81 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Fast and flawless. Couldn't ask for more.
+            </div>
+            <div class="review-name">
+              Andrew Z. — Cranberry
+            </div>
+          </article>
+
+          <!-- 82 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Excellent drywall repair. Several holes were patched so cleanly that they are no longer visible.
+            </div>
+            <div class="review-name">
+              Sean N. — Cranberry
+            </div>
+          </article>
+
+          <!-- 83 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Fifteen exterior apartment-building entryways were handled quickly and efficiently.
+            </div>
+            <div class="review-name">
+              Isaac J. — Cranberry
+            </div>
+          </article>
+
+          <!-- 84 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Patient and accommodating even when we changed our paint color at the last minute.
+            </div>
+            <div class="review-name">
+              Colton N. — Cranberry
+            </div>
+          </article>
+
+          <!-- 85 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              The final cost came in below the original estimate because the walls needed less work than expected, and those savings were passed directly back to us.
+            </div>
+            <div class="review-name">
+              Albert J. — Cranberry
+            </div>
+          </article>
+
+          <!-- 86 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Amazing attention to detail and an excellent finished result.
+            </div>
+            <div class="review-name">
+              Stephanie J. — Seven Fields
+            </div>
+          </article>
+
+          <!-- 87 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Very accommodating scheduling around our busy family routine.
+            </div>
+            <div class="review-name">
+              Brittany Z. — Seven Fields
+            </div>
+          </article>
+
+          <!-- 88 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Our corporate lobby looks polished, sophisticated and consistent with our brand colors.
+            </div>
+            <div class="review-name">
+              Paige Y. — Seven Fields
+            </div>
+          </article>
+
+          <!-- 89 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Exceptional customer service with a clear commitment to customer satisfaction.
+            </div>
+            <div class="review-name">
+              Savannah Z. — Seven Fields
+            </div>
+          </article>
+
+          <!-- 90 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              It was a genuine pleasure having M.T. Christian Painting in our home for a week. The work was careful, professional and the house looks gorgeous.
+            </div>
+            <div class="review-name">
+              Gladys Y. — Seven Fields
+            </div>
+          </article>
+
+          <!-- 91 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              True professionals and excellent work.
+            </div>
+            <div class="review-name">
+              Jason Y. — Hampton
+            </div>
+          </article>
+
+          <!-- 92 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              The exterior paint job completely changed the appearance of our home.
+            </div>
+            <div class="review-name">
+              Adam Y. — Hampton
+            </div>
+          </article>
+
+          <!-- 93 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Excellent commercial knowledge, including recommendations for durable paints suited to high-traffic corridors.
+            </div>
+            <div class="review-name">
+              Luke M. — Hampton
+            </div>
+          </article>
+
+          <!-- 94 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Completely trustworthy in our home. We felt comfortable providing access while we were away.
+            </div>
+            <div class="review-name">
+              Hunter Y. — Hampton
+            </div>
+          </article>
+
+          <!-- 95 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              We painted the interior before listing our house for sale. It sold in one weekend and the buyers specifically commented on how good the paint looked.
+            </div>
+            <div class="review-name">
+              Eugene M. — Hampton
+            </div>
+          </article>
+
+          <!-- 96 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Top-notch quality and excellent service.
+            </div>
+            <div class="review-name">
+              Heather M. — Shaler
+            </div>
+          </article>
+
+          <!-- 97 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Dependable residential service. M.T. Christian Painting arrives when promised.
+            </div>
+            <div class="review-name">
+              Courtney K. — Shaler
+            </div>
+          </article>
+
+          <!-- 98 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Excellent project management from the bidding process through the final walk-through.
+            </div>
+            <div class="review-name">
+              Jenna K. — Shaler
+            </div>
+          </article>
+
+          <!-- 99 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Exceptional experience and expertise. Choosing an experienced local company made the entire project easier.
+            </div>
+            <div class="review-name">
+              Madison K. — Shaler
+            </div>
+          </article>
+
+          <!-- 100 -->
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">
+              Decades of experience are obvious from the ability to evaluate a room, choose the right products and determine exactly what the walls need.
+            </div>
+            <div class="review-name">
+              Ruby K. — Shaler
+            </div>
+          </article>
+
+        </div>
+
+        <div class="show-more-wrap">
+
+          <button
+            class="button button-primary"
+            id="showMoreButton"
+            type="button"
+            onclick="showMoreReviews()"
+          >
+            Show More Reviews
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="cta">
+
+      <div class="container cta-inner">
+
+        <div>
+
+          <h2>
+            Ready to Talk About Your Project?
+          </h2>
+
+          <p>
+            Call today to discuss your residential or commercial project
+            and request a free estimate.
+          </p>
+
+        </div>
+
+        <div class="cta-buttons">
+
+          <a
+            href="tel:14126134177"
+            class="button button-primary"
+          >
+            Call Today: 412-613-4177
+          </a>
+
+          <a
+            href="index.html#estimate"
+            class="button button-secondary"
+          >
+            Free Estimate
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <strong>
+          M.T. Christian Painting
+        </strong>
+
+        <p>
+          Painting & Carpentry Services for residential and commercial
+          customers throughout Pittsburgh's South Hills and North Hills.
+        </p>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 M.T. Christian Painting
+      </div>
+
+    </div>
+
+  </footer>
+
+  <div class="mobile-action-bar">
+
+    <a
+      href="tel:14126134177"
+      class="mobile-call"
+    >
+      ☎ Call Today
+    </a>
+
+    <a
+      href="index.html#estimate"
+      class="mobile-estimate"
+    >
+      Free Estimate
+    </a>
+
+  </div>
+
+  <script>
+
+    function toggleMenu(button) {
+
+      const menu =
+        document.getElementById("mobileNav");
+
+      const isOpen =
+        menu.classList.toggle("open");
+
+      button.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+    }
+
+
+    const reviewCards =
+      document.querySelectorAll(".review-card");
+
+    let visibleReviews = 24;
+
+
+    function updateReviews() {
+
+      reviewCards.forEach(
+        function(card, index) {
+
+          if (index < visibleReviews) {
+
+            card.classList.remove(
+              "hidden-review"
+            );
+
+          } else {
+
+            card.classList.add(
+              "hidden-review"
+            );
+
+          }
+
+        }
+      );
+
+
+      if (
+        visibleReviews >=
+        reviewCards.length
+      ) {
+
+        document
+          .getElementById(
+            "showMoreButton"
+          )
+          .style
+          .display = "none";
+      }
+    }
+
+
+    function showMoreReviews() {
+
+      visibleReviews += 24;
+
+      updateReviews();
+    }
+
+
+    updateReviews();
+
+  </script>
+
+</body>
+</html>
