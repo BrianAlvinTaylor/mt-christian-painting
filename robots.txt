@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://brianalvintaylor.github.io/mt-christian-painting/sitemap.xml
+Sitemap: https://www.mtchristianpainting.com/sitemap.xml

@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://brianalvintaylor.github.io/mt-christian-painting/</loc>
-  </url>
-
-  <url>
-    <loc>https://brianalvintaylor.github.io/mt-christian-painting/reviews.html</loc>
-  </url>
-
-  <url>
-    <loc>https://brianalvintaylor.github.io/mt-christian-painting/services.html</loc>
-  </url>
-
-  <url>
-    <loc>https://brianalvintaylor.github.io/mt-christian-painting/service-areas.html</loc>
-  </url>
-
-  <url>
-    <loc>https://brianalvintaylor.github.io/mt-christian-painting/questions.html</loc>
-  </url>
+  <url><loc>https://www.mtchristianpainting.com/</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/services.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/south-hills-painters.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/interior-painting-pittsburgh.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/exterior-painting-pittsburgh.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/commercial-painting-pittsburgh.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/drywall-repair-pittsburgh.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/service-areas.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/painters-mt-lebanon.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/painters-upper-st-clair.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/painters-bethel-park.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/painters-peters-township.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/reviews.html</loc></url>
+  <url><loc>https://www.mtchristianpainting.com/questions.html</loc></url>
 
 </urlset>
